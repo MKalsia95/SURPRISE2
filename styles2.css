@@ -1,0 +1,80 @@
+/* General Page Styling */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('paper.png');
+    background-size: 1000px;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Wrapper for Centering All Papers */
+.container {
+    position: relative;
+    width: 600px; /* Adjust width as needed */
+    height: 600px; /* Adjust height as needed */
+}
+
+/* Paper Style */
+.paper {
+    border: 5px solid black;
+    position: absolute;
+    background-image: url('paper.png');
+    background-size: 500px;
+    background-position: center center;
+    padding: 20px;
+    box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 250px;
+    z-index: 1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: grab;
+    overflow: hidden;
+}
+
+/* Centering Papers Around Middle of Container */
+.paper.img15 { top: 200px; left: 200px; transform: rotate(-2deg); z-index: 15; }
+.paper.img14 { top: 220px; left: 220px; transform: rotate(3deg); z-index: 14; }
+.paper.img13 { top: 240px; left: 240px; transform: rotate(-3deg); z-index: 13; }
+.paper.img12 { top: 260px; left: 260px; transform: rotate(4deg); z-index: 12; }
+.paper.img11 { top: 280px; left: 280px; transform: rotate(-2deg); z-index: 11; }
+.paper.img10 { top: 300px; left: 300px; transform: rotate(5deg); z-index: 10; }
+.paper.img9 { top: 320px; left: 320px; transform: rotate(-4deg); z-index: 9; }
+.paper.img8 { top: 340px; left: 340px; transform: rotate(2deg); z-index: 8; }
+.paper.img7 { top: 360px; left: 360px; transform: rotate(-3deg); z-index: 7; }
+.paper.img6 { top: 380px; left: 380px; transform: rotate(3deg); z-index: 6; }
+.paper.img5 { top: 400px; left: 400px; transform: rotate(-2deg); z-index: 5; }
+.paper.img4 { top: 420px; left: 420px; transform: rotate(4deg); z-index: 4; }
+.paper.img3 { top: 440px; left: 440px; transform: rotate(-3deg); z-index: 3; }
+.paper.img2 { top: 460px; left: 460px; transform: rotate(3deg); z-index: 2; }
+
+/* Image Styling */
+.paper img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Text Styling */
+p {
+    font-family: 'Zeyada', cursive;
+    font-size: 30px;
+    color: rgb(0, 0, 100);
+    opacity: 0.85;
+    user-select: none;
+    max-width: 100%;
+}
+
+/* Hover Effect - Slight Lift */
+.paper:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Active State - Brings Paper to Front */
+.paper:active {
+    cursor: grabbing;
+}
